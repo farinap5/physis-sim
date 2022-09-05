@@ -7,9 +7,13 @@ def Vx(ang=0, vi=0.0):
     return vi * math.cos(a)
 
 # Particle speed on the y axis.
-def Vy(ang=0, vi=0.0, g=9.81, t=0.0):
+def Vy(ang=0, vi=0.0, g=9.81, t=0.0, var=True):
     a = math.radians(ang)
-    return vi * math.sin(a) - g*t
+    v = vi * math.sin(a)
+    if var:
+        return v - g*t
+    else:
+        return v
 
 def Px(xi=0.0, vx=0.0, t=0.0):
     return xi + vx * t

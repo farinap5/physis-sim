@@ -14,7 +14,7 @@ if __name__ == "__main__":
         vt = ph.Vt(vx=vx,vy=vy)
 
         px = ph.Px(vx=vx,t=i)
-        py = ph.Py(vy=vy,t=i)
+        py = ph.Py(vy=ph.Vy(ang=ang,vi=vi,t=i, var=False),t=i)
         ag = ph.Ang(vx=vx, vy=vy)
 
         print("{t:7.3f} {x:7.3f} {y:7.3f} {vx:7.3f} {vy:7.3f} {vt:7.3f} {a:7.3f}".format(
